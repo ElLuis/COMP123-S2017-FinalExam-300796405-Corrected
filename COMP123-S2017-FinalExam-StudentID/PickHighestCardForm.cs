@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Media;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -115,7 +116,16 @@ namespace COMP123_S2017_FinalExam_StudentID
         // CONSTRUCTORS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public PickHighestCardForm()
         {
+            Thread t = new Thread(new ThreadStart(StartForm));
+            t.Start();
+            Thread.Sleep(3000);
             InitializeComponent();
+            t.Abort();
+        }
+
+        public void StartForm()
+        {
+            Application.Run(new SplashForm());
         }
 
         // PRIVATE METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
