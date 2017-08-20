@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace COMP123_S2017_FinalExam_StudentID
 {
-    class ScoreBoard
+    public class ScoreBoard
     {
         private TextBox _finalScoreTextBox;
         private int _score;
@@ -34,8 +34,9 @@ namespace COMP123_S2017_FinalExam_StudentID
             }
             set
             {
+                _score = value;
                 FinalScoreTextBox.Text = value.ToString();
-                ScoreTextBox.Text = value.ToString();
+                ScoreTextBox.Text = value.ToString(); // changed the assignation
             }
         }
         public TextBox ScoreTextBox
