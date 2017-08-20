@@ -7,6 +7,12 @@ using System.Windows.Forms;
 
 namespace COMP123_S2017_FinalExam_StudentID
 {
+    //Luis Sanchez
+    //300796405
+    //ScoreBoard class to assign properties and conversion
+    //20/08/2017
+    //version 2.0
+
     public class ScoreBoard
     {
         private TextBox _finalScoreTextBox;
