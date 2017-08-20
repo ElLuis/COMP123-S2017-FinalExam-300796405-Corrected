@@ -49,5 +49,44 @@ namespace COMP123_S2017_FinalExam_StudentID
                 _scoreTextBox = value;
             }
         }
+
+        public int Time
+        {
+            get
+            {
+                return _time;
+            }
+
+            set
+            {
+                TimeTextBox.Text = value.ToString();
+            }
+        }
+
+        public TextBox TimeTextBox
+        {
+            get
+            {
+                return _timeTextBox;
+            }
+            set
+            {
+                _timeTextBox = value;
+            }
+        }
+
+        public ScoreBoard (TextBox scoreTextBox, TextBox timeTextBox, TextBox finalScoreTextBox)
+        {
+            this._scoreTextBox = scoreTextBox;
+            this._timeTextBox = timeTextBox;
+            this._finalScoreTextBox = finalScoreTextBox;
+        }
+
+        public void UpdateTime()
+        {
+            int intTimeTextBox = Convert.ToInt32(TimeTextBox.Text) - 1;
+            Time = intTimeTextBox;
+            TimeTextBox.Text = Time.ToString();
+        }
     }
 }
